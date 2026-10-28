@@ -1,0 +1,16 @@
+services:
+  centos:
+    image: centos:7
+    container_name: centos_container
+    volumes:
+      - .:/data
+    command: tail -f /dev/null
+    restart: unless-stopped
+
+  debian:
+    image: ubuntu:22.04 
+    container_name: ubuntu_container
+    volumes:
+      - .:/data
+    command: tail -f /dev/null
+    restart: unless-stopped
